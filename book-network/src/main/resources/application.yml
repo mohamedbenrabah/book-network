@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+#configure the max file size uploaded
+  servlet:
+    multipart:
+      max-request-size: 50MB
+
+#configure open api
+springdoc:
+  default-produces-media-type: application/json
+
+#base url
+server:
+  servlet:
+    context-path: /api/v1/
