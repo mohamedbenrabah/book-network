@@ -14,8 +14,8 @@ import {TokenService} from "../../services/token/token.service";
 export class LoginComponent {
 
   authRequest: AuthenticationRequest = {
-    email: 'aaa',
-    password: '252'
+    email: '',
+    password: ''
   };
   errorMsg: Array<string> = [];
 
@@ -33,7 +33,6 @@ export class LoginComponent {
         this.router.navigate(['books']);
       },
       error: (err: any) => {
-        console.log("error login :",err);
         if(err.error.validationErrors) {
           this.errorMsg = err.error.validationErrors;
         }
